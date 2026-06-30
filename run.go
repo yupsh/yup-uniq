@@ -58,9 +58,17 @@ func newApp(version string, stdin io.Reader, stdout io.Writer, fs afero.Fs) *cli
 		ExitErrHandler: func(context.Context, *cli.Command, error) {},
 		Flags: []cli.Flag{
 			&cli.BoolFlag{Name: flagCount, Aliases: []string{"c"}, Usage: "prefix lines by the number of occurrences"},
-			&cli.BoolFlag{Name: flagRepeated, Aliases: []string{"d"}, Usage: "only print duplicate lines, one for each group"},
+			&cli.BoolFlag{
+				Name:    flagRepeated,
+				Aliases: []string{"d"},
+				Usage:   "only print duplicate lines, one for each group",
+			},
 			&cli.BoolFlag{Name: flagUnique, Aliases: []string{"u"}, Usage: "only print unique lines"},
-			&cli.BoolFlag{Name: flagIgnoreCase, Aliases: []string{"i"}, Usage: "ignore differences in case when comparing"},
+			&cli.BoolFlag{
+				Name:    flagIgnoreCase,
+				Aliases: []string{"i"},
+				Usage:   "ignore differences in case when comparing",
+			},
 		},
 		Action: action(stdin, stdout, fs),
 	}
