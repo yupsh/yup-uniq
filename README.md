@@ -1,23 +1,9 @@
-# yup-uniq
+[![actions](https://github.com/yupsh/yup-uniq/actions/workflows/actions.yml/badge.svg)](https://github.com/yupsh/yup-uniq/actions/workflows/actions.yml)
+[![ci](https://github.com/yupsh/yup-uniq/actions/workflows/ci.yml/badge.svg)](https://github.com/yupsh/yup-uniq/actions/workflows/ci.yml)
+[![dockerfiles](https://github.com/yupsh/yup-uniq/actions/workflows/dockerfiles.yml/badge.svg)](https://github.com/yupsh/yup-uniq/actions/workflows/dockerfiles.yml)
+[![docs](https://github.com/yupsh/yup-uniq/actions/workflows/docs.yml/badge.svg)](https://github.com/yupsh/yup-uniq/actions/workflows/docs.yml)
+[![go](https://github.com/yupsh/yup-uniq/actions/workflows/go.yml/badge.svg)](https://github.com/yupsh/yup-uniq/actions/workflows/go.yml)
+[![release](https://github.com/yupsh/yup-uniq/actions/workflows/release.yml/badge.svg)](https://github.com/yupsh/yup-uniq/actions/workflows/release.yml)
+[![shell](https://github.com/yupsh/yup-uniq/actions/workflows/shell.yml/badge.svg)](https://github.com/yupsh/yup-uniq/actions/workflows/shell.yml)
 
-```
-NAME:
-   uniq - report or omit repeated lines
-
-USAGE:
-   uniq [OPTIONS] [FILE...]
-
-   Filter adjacent matching lines from FILE (or standard input),
-   writing one copy of each group to standard output.
-
-VERSION:
-   dev
-
-GLOBAL OPTIONS:
-   --count, -c        prefix lines by the number of occurrences
-   --repeated, -d     only print duplicate lines, one for each group
-   --unique, -u       only print unique lines
-   --ignore-case, -i  ignore differences in case when comparing
-   --help, -h         show help
-   --version          print version information and exit
-```
+[docs](https://yupsh.github.io/docs.repl/)
