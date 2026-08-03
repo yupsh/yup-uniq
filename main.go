@@ -33,17 +33,29 @@ var spec = clix.Spec{
 	Synopsis: synopsis,
 	Build:    build,
 	Flags: []urf.Flag{
-		&urf.BoolFlag{Name: flagCount, Aliases: []string{"c"}, Usage: "prefix lines by the number of occurrences"},
+		&urf.BoolFlag{
+			Name:    flagCount,
+			Aliases: []string{"c"},
+			Usage:   "prefix lines by the number of occurrences",
+			Sources: urf.EnvVars("YUP_UNIQ_COUNT"),
+		},
 		&urf.BoolFlag{
 			Name:    flagRepeated,
 			Aliases: []string{"d"},
 			Usage:   "only print duplicate lines, one for each group",
+			Sources: urf.EnvVars("YUP_UNIQ_REPEATED"),
 		},
-		&urf.BoolFlag{Name: flagUnique, Aliases: []string{"u"}, Usage: "only print unique lines"},
+		&urf.BoolFlag{
+			Name:    flagUnique,
+			Aliases: []string{"u"},
+			Usage:   "only print unique lines",
+			Sources: urf.EnvVars("YUP_UNIQ_UNIQUE"),
+		},
 		&urf.BoolFlag{
 			Name:    flagIgnoreCase,
 			Aliases: []string{"i"},
 			Usage:   "ignore differences in case when comparing",
+			Sources: urf.EnvVars("YUP_UNIQ_IGNORE_CASE"),
 		},
 	},
 }
